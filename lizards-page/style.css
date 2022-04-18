@@ -24,6 +24,10 @@ h2 > span{
     color: #FFF;
 }
 
+img{
+    width: 200px;
+}
+
 .container{
     max-width: 1000px;
     margin: 0 auto;
