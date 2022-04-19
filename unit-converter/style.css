@@ -1,0 +1,27 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: #516395;
+}
+
+.container{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+header{
+    background: linear-gradient(90deg, #1F1C2C, #928DAB);
+    width: 100%;
+}
+
+h1{
+    font-size: 4.5rem;
+}
+
+main > p{
+    color: #E4E5E6;
+}
