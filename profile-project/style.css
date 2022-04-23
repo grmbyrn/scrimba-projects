@@ -30,6 +30,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+html{
+  font-size: .9rem;
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
@@ -37,7 +41,7 @@ body {
   line-height: 1.5;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 21px;
+  font-size: 1.3125rem;
   margin: 0;
 }
 
@@ -78,8 +82,9 @@ select {
 }
 
 .container{  
-    width: 570px;
+    max-width: 570px;
     margin: 0 auto;
+    width: 90%;
 }
 
 h1,
@@ -93,26 +98,26 @@ h2{
 }
 
 h1 .bold-text{
-    font-size: 80px;
+    font-size: 5rem;
 }
 
 h2 .bold-text{
-    font-size: 60px;
+    font-size: 3.75rem;
 }
 
 h1{
-    font-size: 60px;
+    font-size: 3.75rem;
     margin-top: 0;
 }
 
 h2{
-    font-size: 42px;
+    font-size: 2.625rem;
     margin-top: 0;
     border-top: solid 1px #c4c4c4;
     border-bottom: solid 1px #c4c4c4;
     
-    padding: 20px 0;
-    margin-bottom: 20px;
+    padding: .5em 0;
+    margin-bottom: .5em;
 }
 
 h3{
@@ -126,13 +131,23 @@ p{
 }
 
 .small-text{
-    font-size: 16px;
+    font-size: 1rem;
     margin-top: 5px;
+}
+
+img{
+  max-width: 100%;
+}
+
+header{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 header,
 section{
-    padding: 100px 0;
+    padding: 6.25em 0;
 }
 
 header,
@@ -150,12 +165,70 @@ header img{
     text-decoration: none;
     background-color: #99D930;
     color: #252525;
-    padding: 10px 25px;
-    margin-top: 25px;
+    padding: .625em 1.5625em;
+    margin-top: 1.5625em;
 }
 
 .btn:hover,
 .btn:focus {
     background: #252525;
     color: #fff;
+}
+
+@media (min-width: 750px){
+  body{
+    color: #252525;
+  }
+
+  .wrapper{
+    display: flex;
+    align-items: center;
+    padding-block: 1em;
+  }
+
+  .articles{
+    background-color: #99D930;
+  }
+
+  .articles h2{
+    border-color: black;
+  }
+
+  .btn {
+    background-color: #252525;
+    color: #fff;
+  }
+
+  .btn:hover,
+  .btn:focus {
+      background: #fff;
+      color: #252525;
+  }
+
+  .portfolio {
+    background: #252525;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .portfolio .container {
+    max-width: 1200px;
+  }
+
+  .work{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .portfolio-item{
+    width: 28%;
+  }
+
+  .portfolio-item img{
+    height: 15em;
+    width: 100%;
+    object-fit: cover;
+  }
 }
