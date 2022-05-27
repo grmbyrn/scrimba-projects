@@ -1,7 +1,7 @@
 body {
     text-align: center;
     font-family: 'Happy Monkey', cursive;
-    background: #a2d2ff;
+    background: linear-gradient(#a2d2ff, #EFB0C9);
     color: #ffffff;
 }
 
@@ -54,4 +54,27 @@ h2, h4{
 .gift-img_1:hover{
     background: url('https://media.giphy.com/media/dVoarHJiQcanEfIawt/giphy.gif');
     background-size: contain;
+}
+
+.gift-img_2:hover{
+    background: url('https://media.giphy.com/media/MdqE46HziuFJTlIwjw/giphy.gif');
+    background-size: contain;
+}
+
+.gift-img_3:hover{
+    background: url('https://media.giphy.com/media/DhstvI3zZ598Nb1rFf/giphy-downsized-large.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.gift-img_4:hover{
+    background: url('https://media.giphy.com/media/CAxbo8KC2A0y4/giphy.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.gift-img_5:hover{
+    background: url('https://media.giphy.com/media/JltOMwYmi0VrO/giphy.gif');
+    background-size: cover;
+    background-position: center;
 }
