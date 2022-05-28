@@ -1,0 +1,121 @@
+/**
+Palette: https://scrimba.com/links/hometown-palette
+RED: #E63946
+LIGHT: #F1FAEE
+AQUA: #A8DADC
+LIGHT BLUE: #457B9D
+DARK BLUE: #1D3557
+
+*/
+
+•{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #1D3557;
+}
+
+.hero{
+    background: url('https://images.unsplash.com/photo-1564678479135-01e38a4b2f14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    border: 5px solid #E63946;
+}
+
+.hero h1{
+    background-color: #1D3557;
+    font-size: 2.5rem;
+}
+
+.hero h2{
+    background-color: #457B9D;
+    margin-inline: 20px;
+    font-size: 1.1rem;
+}
+
+.hero h1,
+.hero h2{
+     border-radius: 10px;
+     padding: 10px 20px;
+     color: #fff;
+     margin: 0 auto;
+}
+
+.activity{
+    background-color: #F1FAEE;
+    display: flex;
+    flex-direction: column;
+    padding: 4em;
+}
+
+.activities{
+    display: flex;
+}
+
+.activities div{
+    margin-inline: 1em;
+}
+
+.activity-img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.activities h3{
+    height: 2.5em;
+}
+
+.guide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 5em;
+    background-color: #A8DADC;
+    border-radius: 10px;
+    box-shadow: 0px 10px #1D3557;
+}
+
+.guide > *{
+    flex: 1;
+    padding: 30px;
+}
+
+.guide-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-img{
+    width: 50%;
+    height: 50%;
+}
+
+@media all and (max-width: 980px) {
+    .activities{
+        flex-direction: column;
+    }
+
+    .activities div{
+        margin-block: 1.5em;
+    }
+
+    .guide{
+        flex-direction: column;
+    }
+
+    .guide > *{
+        padding-block: 5px;
+    }
+}
