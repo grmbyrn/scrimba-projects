@@ -1,0 +1,156 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: #1F2937;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+main{
+    width: 400px;
+    margin: 100px;
+}
+
+h1{
+    font-family: 'Karla', sans-serif;
+    color: #ffffff;
+    line-height: 40px;
+    font-size: 40px;
+}
+
+span{
+    color: #4ADF86;
+}
+
+p,
+button,
+label{
+    font-family: 'Inter', sans-serif;
+}
+
+p{
+    font-weight: 400;
+    color: #D5D4D8;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+button, label{
+    font-weight: 500;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    margin-top: 51px;
+    padding: 9px 17px 9px 15px;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+}
+
+button{
+    cursor: pointer;
+    color: #FFFFFF;
+    background: #10B981;
+}
+
+label{
+    color: #10B981;
+    background: #FFFFFF;
+}
+
+.input{
+    margin-top: 20px;
+}
+
+input{
+    padding: 5px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    border-top: 1px solid #2F3E53;
+    padding-top: 51px;
+    margin-top: 51px;
+}
+
+.parent div{
+    width: 300px;
+    height: 40px;
+    padding-block: 10px;
+    text-align: center;
+    background-color: #273549;
+    border-radius: 8px;
+    color: #55F991
+}
