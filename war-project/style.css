@@ -38,7 +38,18 @@ html, body {
     flex-direction: column;
 }
 
+.card-slot{
+    border: 3px solid black;
+    border-radius: 10px;
+    
+}
+
 .card{
-    width: 150px;
-    margin-block: 20px;
+    
+}
+
+.card-slot,
+.card{
+    height: 250px;
+    width: 200px;
 }
