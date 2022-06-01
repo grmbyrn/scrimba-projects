@@ -2,7 +2,7 @@ let deckId
 const cardsContainer = document.getElementById('cards')
 const newDeckBtn = document.getElementById('new-deck')
 const drawCardsBtn = document.getElementById('draw-cards')
-const winner = document.getElementById('winner')
+const header = document.getElementById('header')
 
 function handleClick(){
     fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
@@ -26,6 +26,8 @@ function drawCards(){
         cardsContainer.children[1].innerHTML = `
             <img src='${data.cards[1].image}' class='card'>
         `
+        const winnerText = determineWhoWins(data.cards[0], data.cards[1])
+        header.textContent = winnerText
     })
 }
 
@@ -34,27 +36,21 @@ function determineWhoWins(card1, card2){
     const cardOptionValue1 = cardValueOptions.indexOf(card1.value)
     const cardOptionValue2 = cardValueOptions.indexOf(card2.value)
 
-    if(cardOptionValue1.value > cardOptionValue2.value){
-        winner.innerHTML = `
-            <h2>Player 1 Wins</h2>
-        `
-    } else if(cardOptionValue1.value < cardOptionValue2.value){
-        winner.innerHTML = `
-            <h2>Player 2 Wins</h2>
-        `
+    if(cardOptionValue1 > cardOptionValue2){
+        return 'Player 1 Wins'
+    } else if(cardOptionValue1 < cardOptionValue2){
+        return 'Player 2 Wins'
     } else {
-        winner.innerHTML = `
-            <h2>Tie</h2>
-        `
+        return 'Tie'
     }
 }
 
-const cardObj1 = {
-    value: 'JACK'
-}
+// const cardObj1 = {
+//     value: 'JACK'
+// }
 
-const cardObj2 = {
-    value: '2'
-}
+// const cardObj2 = {
+//     value: '2'
+// }
 
-determineWhoWins(cardObj1, cardObj2)
+// determineWhoWins(cardObj1, cardObj2)
