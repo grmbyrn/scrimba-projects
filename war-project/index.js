@@ -3,11 +3,13 @@ const cardsContainer = document.getElementById('cards')
 const newDeckBtn = document.getElementById('new-deck')
 const drawCardsBtn = document.getElementById('draw-cards')
 const header = document.getElementById('header')
+const remainingCards = document.getElementById('remaining')
 
 function handleClick(){
     fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
     .then(res => res.json())
     .then(data => {
+        remainingCards.innerHTML = `Remaining Cards: ${data.remaining}`
         deckId = data.deck_id
         console.log(deckId)
     })
@@ -20,6 +22,7 @@ function drawCards(){
     fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`)
     .then(res => res.json())
     .then(data => {
+        remainingCards.innerHTML = `Remaining Cards: ${data.remaining}`
         cardsContainer.children[0].innerHTML = `
             <img src='${data.cards[0].image}' class='card'>
         `
@@ -28,6 +31,10 @@ function drawCards(){
         `
         const winnerText = determineWhoWins(data.cards[0], data.cards[1])
         header.textContent = winnerText
+
+        if(data.remaining === 0){
+            drawCardsBtn.disabled = true
+        }
     })
 }
 
