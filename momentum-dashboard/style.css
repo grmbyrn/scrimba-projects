@@ -31,8 +31,13 @@ h1.time{
     text-align: center;
 }
 
-.doge{
+.doge-top{
     display: flex;
     gap: 10px;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.doge p{
+    margin: 0;
 }

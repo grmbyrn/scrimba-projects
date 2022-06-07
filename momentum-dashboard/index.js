@@ -18,9 +18,14 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
     })
     .then(data => {
         console.log(data)
-        document.querySelector('#doge').innerHTML = `
+        document.querySelector('#doge-top').innerHTML = `
             <img src='${data.image.small}'>
             <p>${data.name}</p>
+        `
+        document.querySelector('#doge').innerHTML += `
+            <p>🎯: ${data.market_data.current_price.usd}</p>
+            <p>👆: $${data.market_data.high_24h.usd}</p>
+            <p>👇: $${data.market_data.low_24h.usd}</p>
         `
     })
     .catch(err => console.error(err))
