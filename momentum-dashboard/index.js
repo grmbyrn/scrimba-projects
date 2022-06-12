@@ -30,9 +30,23 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
     })
     .catch(err => console.error(err))
 
-    function getTime(){
-        const date = new Date()
-        document.getElementById('time').textContent = date.toLocaleTimeString('en-us', {timeStyle: 'short'})
-    }
+function getTime(){
+    const date = new Date()
+    document.getElementById('time').textContent = date.toLocaleTimeString('en-us', {timeStyle: 'short'})
+}
 
-    setInterval(getTime, 1000)
+setInterval(getTime, 1000)
+
+navigator.geolocation.getCurrentPosition(position => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`)
+        .then(res => {
+            if(!res.ok){
+                throw Error('Weather data is not available')
+            }
+            return res.json()
+        })
+        .then(data => {
+            console.log(data)
+        })
+        .catch(err => console.error(err))
+})
